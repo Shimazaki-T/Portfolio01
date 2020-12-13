@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+    <style>
+
+        @keyframes one{
+
+            0% {
+                opacity:0;
+            }
+
+            50% {
+                opacity:0.7;
+                font-size:2.2rem;
+                color:#00ffaa;
+            }
+
+            100% {
+                opacity:1;
+            }
+        }
+
+        @keyframes fadein{
+
+            0% {
+                opacity:0;
+                margin-top:3rem;
+            }
+            100% {
+                opacity:1;
+            }
+            }
+
+        .container0{
+            display:flex;
+        }
+
+        .container1{
+            animation-name:fadein;
+              animation-duration: 1.5s;
+        }
+
+        .container2{
+            display:flex;
+        }
+
+          header{
+              background-color: #337bff;
+          }
+
+          h1 {
+              animation-name:one !important; 
+              animation-duration: 3s;
+              color:#ffffff;
+              text-align: center;
+              margin-left:5%;
+              margin-right:48.5%;
+              padding:0.5rem;
+              background-color:#44baba;
+              border: 3px solid #0000aa;
+              border-radius: 0.5rem;
+          }
+
+          ul {
+              list-style-position: inside;
+          }
+          header li {
+              color: #ffffff;
+              background-color:#44baba;
+              margin:1rem 0rem;
+              padding:1rem 0.5rem;
+              border: 1px solid #0000aa;
+          }
+
+          header li:hover{
+              color: #333333;
+              background-color:#ffffff;
+          }
+
+          #a2 {
+              border-right: none;
+              border-left: none;
+          }
+
+          header li::after{
+              padding:0.5rem;
+          }
+
+          .img1 {
+            margin:2rem 0 0.5rem 0;
+            width:480px;
+            height:300px;
+            background-size:cover;
+          }
+
+          #main1 {
+              color:#337bff;
+              background-color: #ffffff;
+              padding: 0.5rem;
+              height:850px;
+              width:70%;
+              text-align:center;
+          }
+
+          .special1 {
+              color:#ffffff;
+              background-color: #ff3300;
+              border-radius:0.5rem;
+              border-bottom:5px solid #aa1100;
+              border-right:3px solid #aa1100;
+              padding:0.5rem;
+              width:10rem;
+          }
+
+          .special1:hover{
+              background-color: #aa1100;
+              border-radius:0.5rem;
+              border-bottom:5px solid #aa1100;
+              border-right:3px solid #aa1100;
+              padding:0.5rem;
+              width:10rem;
+              margin-top:1.5rem;
+          }
+
+          #side1{
+              background-color:#44baba;
+              color:#ffffff;
+              width:30%;
+          }
+              
+
+          #side1 h2, p {
+              margin:0.5rem 0 0 0.5rem;
+              padding:0.5rem 0;
+              text-align: center;
+          }
+          
+
+          #side1 ul {
+              background-color: #337bff;
+              color:#ffffff;
+              border: 2px solid #0000aa;
+              width:70%;
+              margin-left:10%;
+          }
+
+          #side1 li {
+              border-bottom: 1.5px solid #0000aa;
+          }
+
+          #side1 li:hover {
+              color:#333333;
+              background-color:#ffffff;
+          }
+
+          #side1 .lilast{
+              border:none;
+          }
+
+          footer{
+              background-color:#2b2b2b;
+              color:#ffffff;
+          }
+
+        
+
+    </style>
+</head>
+<body>
+ <header class="container0">
+  <h1 class="container1">xyz学習塾</h1>
+  <ul class="container1 container2">
+    <li id="a1">当塾のこだわり</li>
+    <li id="a2">教室一覧</li>
+    <li id="a3">指導内容</li>
+  </ul>
+ </header>
+ <div class="container2">
+ <main id="main1">
+     <img src ="IMG_2353.jpg" class="img1">
+     <h2 class="container1">冬期講習</h2>
+        <p class="container1">この冬の学習を通して成績をグッと向上させてみませんか？<br>
+        たくさんのご応募を楽しみにしております。</p>
+        <p class="container1">対象学年：小４～高３</p>
+        <span class="container1 special1">資料請求はこちら</span>
+
+ </main>
+ <aside id="side1">
+    <h2>電話番号:00-0000-0000</h2>
+    <p>受付時間9:00~22:00</p>
+    <ul class="about1">
+        <li>xyz学習塾について</li>
+        <li>指導コースについて</li>
+        <li>講師陣</li>
+        <li class="lilast">料金</li>
+    </ul>
+    <ul class="about2">
+        <li>冬期講習について</li>
+        <li>小学生</li>
+        <li>中学生</li>
+        <li class="lilast">高校生</li>
+    </ul>
+ </aside>
+ </div>
+ <footer>
+    <h2>xyz学習塾</h2>
+    <p>All right 2020.</p>
+ </footer> 
+ <script type="text/javascript">
+
+    const a1 = document.getElementById("a1");
+    const a2 = document.getElementById("a2");
+    const a3 = document.getElementById("a3");
+    const main1 = document.getElementById("main1");
+    const element1 = document.createElement("h3");
+    const text1 = document.createTextNode("志望校合格へ！");
+
+    function resetColor()  {
+        main1.style.cssText ="color:#0066ff;";
+    };
+
+    function changeColor() {
+        main1.style.cssText = "color:#ff7c89;";
+        document.body.appendChild(element1).appendChild(text1);
+
+        };
+
+    const funky = () => {
+        main1.style.cssText = "background-color:#aaaaaa";
+    };
+
+    a1.addEventListener('click',resetColor);
+    a2.addEventListener('click',changeColor);
+    a3.addEventListener('click',funky);
+    
+ </script>  
+</body>
+</html>
